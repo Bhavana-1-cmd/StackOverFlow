@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 
 const Questions = ({question}) => {
-  console.log(question)
+  // console.log(question)
   return (
     <div className='display-question-container'>
       <div className='display-votes-ans'>

@@ -10,7 +10,7 @@ import DisplayAnswer from './DisplayAnswer'
 const QuestionsDetails = () => {
   
   const { id } = useParams()
-  console.log(id)
+  // console.log(id)
 
     var questionsList = [
     {
@@ -81,7 +81,7 @@ const QuestionsDetails = () => {
             {
                 questionsList.filter(question => question._id === id).map(question => (
                   <div key={question._id}>
-                  {console.log(question)}
+                  {/* {console.log(question)} */}
                     <section className='question-details-container'>
                       <h1>{question.questionTitle}</h1>
                       <div className='question-details-container-2'>
@@ -106,8 +106,8 @@ const QuestionsDetails = () => {
                              </div>
                              <div>
                               <p>asked {question.askedOn}</p>
-                              <Link to={`/User/${question.user._id}`} className='user-link' style={{color:'#0086d8'}}>
-                                <Avatar backgroundColor="orange" px='8px' py='5px'>{question.userPosted.chartAt(0).toUpperCase()}</Avatar>
+                              <Link to={`/User/${question._id}`} className='user-link' style={{color:'#0086d8'}}>
+                                <Avatar backgroundColor="orange" px='8px' py='5px'>{question.userPosted.charAt(0).toUpperCase()}</Avatar>
                            <div>
                             {question.userPosted}
                            </div>
